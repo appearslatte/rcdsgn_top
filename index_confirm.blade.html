@@ -1,0 +1,80 @@
+{!! $header !!}
+
+<!--ENTRY CONFIRM-->
+<section id="entry" class="confirm">
+    <div class="cts">
+        <div class="titles">
+			<div class="icon inviewfadeInUp"><img src="img/entry_icon.svg" alt="ENTRY"></div>
+			<h2 class="inviewfadeInUp"><span class="fr">応募</span>フォーム</h2>
+		</div><!--titles-->
+            
+        <div class="entry_form">
+            <div class="entry_cts">
+                <p class="copy inviewfadeInUp">ご入力内容に間違いがなければ、<br><span class="b">「送信する」</span>からエントリーしてください。</p>
+
+                <form action="{{ $next_url}}" method="post" class="h-adr">
+                    {!! $csrf !!}
+
+                    <div class="confirmations">
+                        @foreach($pagedatas as $pagedata)
+                        <div class="confirmation">
+                            <p class="item">Q{{ $pagedata['question_no'] }}.&nbsp;{{ $pagedata['label'] }}</p>
+                            {!! $pagedata['confirm_value'] !!}
+                        </div><!--confirmation-->
+                        @endforeach
+                    </div><!--confirmations-->
+
+                    <div class="privacy_policy">
+                        <p class="item">個人情報の取扱規程</p>
+                        <p class="tx">当社の個人情報の取扱規程について同意される方のみ送信できます。</p>
+                        <div class="privacies">
+                            <div class="privacy">
+                                <p class="ex">●●●●●（以下、「当社」といいます。）は、応募者の個人情報を、以下の取扱い方針（以下、「本方針」といいます。）及び個人情報の管理について定める当社「プライバシーポリシー」に基づき、適切に管理・運用致します。当社求人へのご応募にあたっては、本方針及び「プライバシーポリシー」をよくお読みになり、これらへ同意して頂く必要があります。</p>
+                            </div><!--privacy-->
+                            <div class="privacy">
+                                <p class="privacy_item"><span>第1条</span><span>個人情報の利用目的</p>
+                                <p class="ex">ご応募にあたってご提供頂いた個人情報は、以下の目的のためにのみ利用致します。</p>
+                                <ul>
+                                    <li><span>1.</span><span>採用選考時の判断</span></li>
+                                    <li><span>2.</span><span>応募者の方へのご連絡</span></li>
+                                    <li><span>3.</span><span>採用後の人事・労務業務における使用</span></li>
+                                </ul>
+                            </div><!--privacy-->
+    
+                            <div class="privacy">
+                                <p class="privacy_item"><span>第2条</span><span>書類・電子データの取扱い</p>
+                                <ul>
+                                    <li><span>1.</span><span>ご応募にあたってご提供頂いた書類は、採用又は不採用のいずれの場合であっても返却することはできません。</span></li>
+                                    <li><span>2.</span><span>ご応募にあたってご提供頂いた書類ないし電子データは、当社にて適切に管理し,しかるべき時に破棄・消去（破棄等）致します。当社は、応募者に対し、当該書類ないし電子データの保管又は破棄等のいずれの義務も負わないものとします。</span></li>
+                                </ul>
+                            </div><!--privacy-->
+    
+                            <div class="privacy">
+                                <p class="privacy_item"><span>第3条</span><span>適用除外</p>
+                                <p class="ex">当社求人へのご応募の体裁をとるものであっても、その内容がこれにあたらない場合、本方針の対象外となります。</p>
+                            </div><!--privacy-->
+
+                            <div class="privacy">
+                                <p class="privacy_item"><span>第4条</span><span>個人情報を提供いただけない場合の取扱い</p>
+                                <p class="ex">当社が指定する個人情報をご提供いただけない場合、当社求人へご応募頂くことはできません。</p>
+                            </div><!--privacy-->
+
+                            <div class="privacy">
+                                <p class="privacy_item"><span>第5条</span><span>お問い合わせ</p>
+                                <p class="ex">ご応募に関するお問い合わせは、次の当社担当までご連絡ください。</p>
+                                <p class="contact"><span class="b">株式会社●●●●●</span><br>〒●●●-●●●●<br>●●●●●<br>連絡先：●●●●●</p>
+                            </div><!--privacy-->
+                        </div><!--privacies-->
+                    </div><!--privacy_policy-->
+                    
+                    <div class="btns">
+                        <div class="btn"><input type="button" value="修正する" class="style_fix" onclick="location.href='{{ $back_url }}'"></div>
+                        <div class="btn"><input type="submit" value="送信する" class="style_submit"></div>
+                    </div><!--btns-->
+                </form>
+            </div><!--entry_cts-->
+        </div><!--entry_form-->
+    </div><!--cts-->
+</section><!--entry-->
+
+{!! $footer !!}

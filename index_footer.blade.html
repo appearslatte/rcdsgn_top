@@ -1,0 +1,65 @@
+
+<!--FOOTER-->
+<footer>
+	<div class="info">
+		<div class="logo inviewfadeInUp"><img src="img/logo.png" alt=""></div>
+		<p class="company inviewfadeInUp">株式会社トップ</p>
+		<p class="address inviewfadeInUp">〒220-0012<br class="sp">神奈川県横浜市西区みなとみらい5-3-3-2504</p>
+	</div><!--info-->
+    <p class="copyright inviewfadeInUp">Copyright&copy;<script>new Date().getFullYear()>2010&&document.write(+new Date().getFullYear());</script>. TOP Co.,Ltd. All Rights Reserved.</p>
+</footer>
+
+<!--JS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper_trigger.js"></script>
+<script src="js/default.js"></script>
+<script src="js/jquery.inview.js"></script>
+<script src="js/inview_trigger.js"></script>
+
+<!--LibForm JS-->
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="?p=v"></script>
+
+
+
+<!--INTERVIEW-->
+<script>
+	$(".tab1").click(function () {
+		$(this).addClass('on');
+		$(".interview1").show();
+		$(".interview2").hide();
+		$(".interview3").hide();
+		$(".tab2").removeClass('on');
+		$(".tab3").removeClass('on');
+	});
+	$(".tab2").click(function () {
+		$(this).addClass('on');
+		$(".interview1").hide();
+		$(".interview2").show();
+		$(".interview3").hide();
+		$(".tab1").removeClass('on');
+		$(".tab3").removeClass('on');
+	});
+	$(".tab3").click(function () {
+		$(this).addClass('on');
+		$(".interview1").hide();
+		$(".interview2").hide();
+		$(".interview3").show();
+		$(".tab1").removeClass('on');
+		$(".tab2").removeClass('on');
+	});
+</script>
+
+<!--SWIPER RESIZE-->
+<script>
+    $(window).resize(function(){
+        mySwiper.autoplay.paused = false;
+        mySwiper.autoplay.start();
+});
+</script>
+
+</div><!--wrap-->
+</body>
+</html>

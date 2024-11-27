@@ -1,0 +1,50 @@
+{!! $header !!}
+
+<!--ENTRY-->
+<section id="entry" class="entry_contact">
+    <div class="bg"></div>
+    <div class="cts">
+        <div class="titles">
+			<div class="icon inviewfadeInUp"><img src="img/entry_icon.svg" alt="ENTRY"></div>
+			<h2 class="inviewfadeInUp"><span class="fr">応募</span>フォーム</h2>
+		</div><!--titles-->
+
+        <div class="entry_form">
+            {!! $steps !!}
+
+            <div class="entry_cts">
+                <p class="q">Q{{$question_no}}</p>
+                <p class="question">ご連絡先を<br class="sp">教えてください</p>
+            
+                <form action="{{ $next_url }}" method="post">
+                    <div class="answer">
+                        <div class="forms">
+                            <div class="form">
+                                <p class="item">電話番号</p>
+                                <div class="detail">
+                                    <p><input required type="tel" class="style_tel" name="tel" placeholder="000-0000-0000" value="{{ $datas->tel->value }}"></p>
+                                    <span class="warning" id="tel_error"></span>
+                                </div><!--detail-->
+                            </div><!--form-->
+
+                            <div class="form">
+                                <p class="item">メールアドレス</p>
+                                <div class="detail">
+                                    <p><input required type="email" class="style_mail" name="email" placeholder="xxx@xxx.xxx" value="{{ $datas->email->value }}"></p>
+                                    <span class="warning" id="email_error"></span>
+                                </div><!--detail-->
+                            </div><!--form-->
+                        </div><!--forms-->
+                    </div><!--answer-->
+
+                    <div class="btns">
+                        <div class="btn"><input type="button" class="style_fix" value="戻って修正する" onclick="location.href='{{ $back_url }}'"></div>
+                        <div class="btn"><input type="submit" class="style_submit" value="次へ"></div>
+                    </div><!--btns-->
+                </form>
+            </div><!--entry_cts-->
+        </div><!--entry_form-->
+    </div><!--cts-->
+</section><!--entry-->
+
+{!! $footer !!}

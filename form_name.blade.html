@@ -1,0 +1,55 @@
+{!! $header !!}
+
+<!--ENTRY-->
+<section id="entry" class="entry_name">
+    <div class="cts">
+        <div class="titles">
+            <div class="icon inviewfadeInUp"><img src="img/entry_icon.png" alt="ENTRY"></div>
+            <h2 class="inviewfadeInUp">応募フォーム</h2>
+        </div><!--titles-->
+
+        <div class="entry_form">
+            {!! $steps !!}
+
+            <div class="entry_cts">
+                <p class="q">Q{{$question_no}}</p>
+                <p class="question">お名前とフリガナを<br class="sp">教えてください</p>
+            
+                <form action="{{ $next_url }}" method="post">
+                    <div class="answer">
+                        <div class="forms">
+                            <div class="form">
+                                <p class="item">氏名</p>
+                                <div class="detail">
+                                    <div class="detail_cts">
+                                        <p><input required type="text" name="sei" value="{{ $datas->sei->value }}" class="style_name" placeholder="姓"></p>
+                                        <p><input required type="text" name="mei" value="{{ $datas->mei->value }}" class="style_name" placeholder="名"></p>
+                                    </div><!--detail_cts-->
+                                </div><!--detail-->
+                            </div><!--form-->
+                            <span class="warning" id="name_error"></span>
+
+                            <div class="form">
+                                <p class="item">フリガナ</p>
+                                    <div class="detail">
+                                        <div class="detail_cts">
+                                            <p><input required type="text" name="sei_kana" value="{{ $datas->sei_kana->value }}" class="style_kana" placeholder="セイ"></p>
+                                            <p><input required type="text" name="mei_kana" value="{{ $datas->mei_kana->value }}" class="style_kana" placeholder="メイ"></p>
+                                        </div><!--detail_cts-->
+                                    </div><!--detail-->
+                            </div><!--form-->
+                            <span class="warning" id="kana_error"></span>
+                        </div><!--forms-->
+                    </div><!--answer-->
+
+                    <div class="btns">
+                        <div class="btn"><input type="button" class="style_fix" value="戻って修正する" onclick="location.href='{{ $back_url }}'"></div>
+                        <div class="btn"><input type="submit" class="style_submit" value="次へ"></div>
+                    </div><!--btns-->
+                </form>
+            </div><!--entry_cts-->
+        </div><!--entry_form-->
+    </div><!--cts-->
+</section><!--entry-->
+
+{!! $footer !!}

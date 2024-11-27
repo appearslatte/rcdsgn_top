@@ -1,0 +1,50 @@
+{!! $header !!}
+
+<!--ENTRY-->
+<section id="entry" class="entry_age">
+    <div class="cts">
+        <div class="titles">
+            <div class="icon inviewfadeInUp"><img src="img/entry_icon.png" alt="ENTRY"></div>
+            <h2 class="inviewfadeInUp">応募フォーム</h2>
+        </div><!--titles-->
+
+        <div class="entry_form">
+            {!! $steps !!}
+
+            <div class="entry_cts">
+                <p class="q">Q{{$question_no}}</p>
+                <p class="question">年齢を入力してください</p>
+            
+                <form action="{{ $next_url }}" method="post">
+                    <div class="answer">
+                        <div class="forms">
+                            <div class="form">
+                                <div class="detail">
+                                    <div class="detail_cts">
+                                        <p>
+                                            <select name="age" class="style_age">
+                                                <option value="" hidden>年齢</option>
+                                                @foreach($datas->age->select_vals as $k => $v)
+                                                    <option value="{{ $v }}" {{ $datas->age->select_selected[$k] }}>{{ $v }}</option>
+                                                @endforeach
+                                            </select>
+                                        </p>
+                                        <p>歳</p>
+                                    </div><!--detail_cts-->
+                                    <span class="warning" id="age_error"></span>
+                                </div><!--detail-->
+                            </div><!--form-->
+                        </div><!--forms-->
+                    </div><!--answer-->
+
+                    <div class="btns">
+                        <div class="btn"><input type="button" class="style_fix" value="戻って修正する" onclick="location.href='{{ $back_url }}'"></div>
+                        <div class="btn"><input type="submit" class="style_submit" value="次へ"></div>
+                    </div><!--btns-->
+                </form>
+            </div><!--entry_cts-->
+        </div><!--entry_form-->
+    </div><!--cts-->
+</section><!--entry-->
+
+{!! $footer !!}

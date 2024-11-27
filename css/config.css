@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+body {
+margin:0;
+padding:0;
+background:#fff;
+overflow-x:hidden;
+}
+
+body,div,p,a,article,section,nav,ul,li,header,footer,input,select,textarea,h1,h2,h3,h4,h5,th,td {
+font-size:1em;
+font-weight:400;
+line-height:160%;
+letter-spacing:0;
+word-wrap:break-word;
+color:#000;
+font-family:'Poppins','Noto Sans JP', sans-serif;
+}
+
+img {
+width:100%;
+height:auto;
+}
+
+.wrap {
+overflow-x:hidden;
+}
+
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+padding:0;
+margin:0;
+}
+
+img {
+width:100%;
+height:auto;
+padding:0;
+margin:0;
+vertical-align:bottom;
+border-style:none;
+}
+
+li { list-style:none; }
+a {text-decoration:none;}
+
+a:hover {
+-webkit-animation:hover 0.5s ease forwards;
+animation:hover 0.5s ease forwards;
+}
+
+.fr {color:#FF4545;}
+.fw {color:#fff;}
+
+.b {font-weight:bold;}
+.fl{font-size:120%;}
+.fll{font-size:150%;}
+
+
+
+/*FORM*/
+input , select , textarea , button {
+-webkit-appearance:none;
+-ms-appearance:none;
+-moz-appearance:none;
+-o-appearance:none;
+appearance:none;
+outline:none;
+box-shadow:none;
+border:#ddd 1px solid;
+}
+
+input:focus , textarea:focus , button:focus {
+border:#000 1px solid;
+}
+
+input[type="checkbox"] , input[type="radio"] {
+background:#fff;
+padding:5px;
+border-radius:100%;
+}
+
+input[type="checkbox"]:checked , input[type="radio"]:checked {
+background:#464646;
+border:#464646 1px solid;
+}
+
+::placeholder {
+color:#ddd;
+}
+
+select {
+background:#fff url(../img/select.svg) no-repeat;
+background-size:10px 7px;
+background-position:right 15px center;
+position:relative;
+width:100%;
+padding:15px;
+}
+
+
+
+/*USEFUL*/
+.cts {
+margin:auto;
+}
+
+.attention p {
+font-size:80%;
+display:flex;
+}
+
+.ex p {
+padding-bottom:30px;
+}
+
+.ex p:last-child {
+padding-bottom:0;
+}

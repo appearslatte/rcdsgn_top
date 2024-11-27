@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+/*ANIMATION*/
+@keyframes hover {
+0%{opacity:1;}
+100%{opacity:0.5;}
+}
+
+@keyframes cta {
+0%{transform:scale(1);}
+100%{transform:scale(1.03);}
+}
+
+
+
+/*INVIEW*/
+.inviewfadeInUp {
+opacity:0;
+transform:translate(0,10%);
+transition:0.5s ease;
+}
+
+.fadeInUp {
+opacity:1;
+transform:translate(0, 0);
+}
+
+.inviewfadeInRight {
+opacity:0;
+transform:translate(20%,0);
+transition:0.5s ease;
+}
+
+.fadeInRight {
+opacity:1;
+transform:translate(0, 0);
+}
+
+.inviewfadeInDown {
+opacity:0;
+transform:translate(0,-20%);
+transition:0.5s ease;
+}
+
+.fadeInDown {
+opacity:1;
+transform:translate(0, 0);
+}
+
+.inviewfadeInLeft {
+opacity:0;
+transform:translate(-20%,0);
+transition:0.5s ease;
+}
+
+.fadeInLeft {
+opacity:1;
+transform:translate(0, 0);
+}
+
+.inviewfadeIn {
+opacity:0;
+transition:0.5s ease;
+}
+
+.fadeIn {
+opacity:1;
+}
+
+.inviewfadeInLine {
+width:0;
+transition:0.5s ease;
+}
+
+.fadeInLine {
+width:70px;
+height:1px;
+background:#e696b4;
+}
+
+.inviewfadeInDownLeft {
+opacity:0;
+transform:translate(-20%,-20%);
+transition:0.5s ease;
+}
+
+.fadeInDownLeft {
+opacity:1;
+transform:translate(0, 0);
+}
+
+.inviewfadeInDownRight {
+opacity:0;
+transform:translate(20%,-20%);
+transition:0.5s ease;
+}
+
+.fadeInDownRight {
+opacity:1;
+transform:translate(0, 0);
+}
+
+.inviewfadeInUpLeft {
+opacity:0;
+transform:translate(-20%,20%);
+transition:0.5s ease;
+}
+
+.fadeInUpLeft {
+opacity:1;
+transform:translate(0, 0);
+}
+
+.inviewfadeInUpRight {
+opacity:0;
+transform:translate(20%,20%);
+transition:0.5s ease;
+}
+
+.fadeInUpRight {
+opacity:1;
+transform:translate(0, 0);
+}
+
+
+
+/*DELAY*/
+.delay1 {
+transition-delay:0.2s;
+}
+
+.delay2 {
+transition-delay:0.4s;
+}
+
+.delay3 {
+transition-delay:0.6s;
+}
+
+.delay4 {
+transition-delay:0.8s;
+}
+
+.delay5 {
+transition-delay:1s;
+}
+
+.delay6 {
+transition-delay:1.2s;
+}
+
+.delay7 {
+transition-delay:1.4s;
+}
+
+.delay8 {
+transition-delay:1.6s;
+}
+
+.delay9 {
+transition-delay:1.8s;
+}
+
+.delay10 {
+transition-delay:2s;
+}

@@ -1,0 +1,39 @@
+{!! $header !!}
+
+<!--ENTRY-->
+<section id="entry" class="entry_area">
+	<div class="bg"></div>
+    <div class="cts">
+		<div class="titles">
+			<div class="icon inviewfadeInUp"><img src="img/entry_icon.svg" alt="ENTRY"></div>
+			<h2 class="inviewfadeInUp"><span class="fr">応募</span>フォーム</h2>
+		</div><!--titles-->
+
+        <div class="entry_form">
+            {!! $steps !!}
+
+            <div class="entry_cts">
+                <p class="q">Q{{$question_no}}</p>
+                <p class="question">ご希望のエリアを<br class="sp">お選びください</p>
+                <p class="attention">（複数選択可）</p>
+            
+                <form action="{{ $next_url }}" method="post">
+                    <div class="answer">
+						<input type="hidden" name="area[]" value="">
+						@foreach($datas->area->check_vals as $val)
+							<p><input type="checkbox" name="area[]" id="area_{{ $loop->iteration }}" class="style_area" value="{{ $datas->area->check_vals[$loop->index] }}" {{ $datas->area->check_checked[$loop->index] }}><label for="area_{{ $loop->iteration }}">{{ $val }}</label></p>
+						@endforeach
+					</div><!--answer-->
+                    <span class="warning" id="area_error"></span>
+
+                    <div class="btns">
+                        <div class="btn"><input type="button" class="style_fix" value="戻って修正する" onclick="location.href='{{ $back_url }}'"></div>
+                        <div class="btn"><input type="submit" class="style_submit" value="次へ"></div>
+                    </div><!--btns-->
+                </form>
+            </div><!--entry_cts-->
+        </div><!--entry_form-->
+    </div><!--cts-->
+</section><!--entry-->
+
+{!! $footer !!}
