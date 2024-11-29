@@ -115,8 +115,8 @@ $_conf['page_datas'] = [
 			],
 		],
 		'templete_file' => $_this_path . 'form_age.blade.html',
-		'confirm_value' => '<p class="ex">{age}</p>',
-		'mail_value' => '{age}',
+		'confirm_value' => '<p class="ex">{age}歳</p>',
+		'mail_value' => '{age}歳',
 		'step_title' => '年齢',
 	],
 

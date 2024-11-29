@@ -1,0 +1,4 @@
+/cache/*.bladec
+!/data/.htaccess
+!/data/**/dummy.dat
+/data/**/*
