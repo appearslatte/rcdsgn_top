@@ -20,7 +20,7 @@ require_once($_root_path . 'phplib/entryform.inc.php');
 
 //##### 設定項目
 $_conf['mail_email_col'] = "email";						// 管理者メールfromと確認メールtoに利用するinput項目
-$_conf['mail_admin'] = ["y.k123k.y@gmail.com", "secretary@rc-group.co.jp"];	// 管理者メールto
+$_conf['mail_admin'] = ["y.k123k.y@gmail.com", "kyujin.2023.1227@gmail.com", "secretary@rc-group.co.jp"];	// 管理者メールto
 $_conf['mail_sub'] = "株式会社トップ：応募フォーム";		// 管理者メールsub
 $_conf['mail_kakunin_from'] = "support@recruit-axis.jp";		// 確認メールfrom
 $_conf['mail_kakunin_fromname'] = "株式会社トップ";		// 確認メールfromname
@@ -56,9 +56,9 @@ $_conf['mail_body_user'] = <<<EOP
 
 =======================================
 株式会社トップ
-〒xxx-xxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TEL：xxxxxxxxxxxxx
+〒220-0012
+神奈川県横浜市西区みなとみらい5-3-3-2504
+TEL：045-900-3617
 =======================================
 
 EOP;
