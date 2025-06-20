@@ -20,7 +20,7 @@ require_once($_root_path . 'phplib/entryform.inc.php');
 
 //##### 設定項目
 $_conf['mail_email_col'] = "email";						// 管理者メールfromと確認メールtoに利用するinput項目
-$_conf['mail_admin'] = ["y.k123k.y@gmail.com", "kyujin.2023.1227@gmail.com", "secretary@rc-group.co.jp"];	// 管理者メールto
+$_conf['mail_admin'] = ["y.k123k.y@gmail.com", "kyujin.2023.1227@gmail.com"];	// 管理者メールto
 $_conf['mail_sub'] = "株式会社トップ：応募フォーム";		// 管理者メールsub
 $_conf['mail_kakunin_from'] = "support@recruit-axis.jp";		// 確認メールfrom
 $_conf['mail_kakunin_fromname'] = "株式会社トップ";		// 確認メールfromname
@@ -67,7 +67,7 @@ EOP;
 //##### ページ項目設定
 // ページ設定
 $_conf['use_page'] = ['status', 'area', 'age', 'name', 'contact'];
-$_conf['page_datas']['area']['form_datas']['area']['check_vals'] = ['北海道', '福岡'];
+$_conf['page_datas']['area']['form_datas']['area']['check_vals'] = ['一都三県', '愛知・岐阜・静岡', '広島', '九州'];
 
 //##### recruit-axis 送信設定
 if(true) {
